@@ -6,7 +6,7 @@
 .DESCRIPTION
 	Version: 1.0.0
 	BootStrap.ps1 is a Windows PowerShell script to download and kickstart the Azure AD App Proxy Demo environment.
-    It will install IIS completely, configure the application including KCD
+        It will install IIS completely, configure the application including KCD. Requires the App Proxy Connector to be preinstalled for KCD configuration.
 .DISCLAIMER
 	THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
 	ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
