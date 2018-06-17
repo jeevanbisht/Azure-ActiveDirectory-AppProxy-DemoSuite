@@ -17,12 +17,12 @@
 
 param
 (    
-    [Parameter(Mandatory=$false)]
-    #[Parameter(Mandatory=$true)]
+    
+    [Parameter(Mandatory=$true)]
     [string] $BootStrapFolder,
 
-    [Parameter(Mandatory=$false)]
-    #[Parameter(Mandatory=$true)]
+    
+    [Parameter(Mandatory=$true)]
     [string] $AppProxyConnector
 )
 
