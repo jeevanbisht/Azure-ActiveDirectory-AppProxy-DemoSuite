@@ -149,7 +149,10 @@ Function Add-KCD {
 
 
 [string] $AppPoolUserName = $appName+"-AppPool"
-[string] $AppPoolPassword = "IOTPassword@1248"
+
+[Reflection.Assembly]::LoadWithPartialName("System.Web")
+[string] $passrandom=[system.web.security.membership]::GeneratePassword(8,3)
+[string] $AppPoolPassword = "MSFT" + $passrandom
 
 
 
