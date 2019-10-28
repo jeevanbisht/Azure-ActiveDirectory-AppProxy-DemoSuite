@@ -147,8 +147,9 @@ Function Add-KCD {
 [string] $appName2 = "FormsSample"
 [string] $appPath2 = $BootStrapFolder + "Forms"
 
+[string] $Randomizer = -join ((65..90) + (97..122) | Get-Random -Count 5 | % {[char]$_})
 
-[string] $AppPoolUserName = $appName+"-AppPool"
+[string] $AppPoolUserName = $Randomizer +"-AppPool"
 
 [Reflection.Assembly]::LoadWithPartialName("System.Web")
 [string] $passrandom=[system.web.security.membership]::GeneratePassword(8,3)
