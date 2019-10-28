@@ -242,7 +242,7 @@ Write-Progress -PercentComplete 80 -id 2 -Activity "Configuration Started" -Stat
 Write-Progress -PercentComplete 91 -id 1 -Activity "App Proxy Demo Installer " -Status "Starting Configuration" 
 Write-Progress -PercentComplete 81 -id 2 -Activity "Configuration Started" -Status "Set KCD !!" 
 
-Add-KCD -AppPoolUserName $AppPoolUserName -AppProxyConnetor $AppProxyConnector
+#Add-KCD -AppPoolUserName $AppPoolUserName -AppProxyConnetor $AppProxyConnector
 
 Write-Progress -PercentComplete 99 -id 1 -Activity "App Proxy Demo Installer " -Status "Starting Configuration"  
 Write-Progress -PercentComplete 99 -id 2 -Activity "Configuration Started" -Status "Set KCD Completed!!" 
