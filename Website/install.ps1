@@ -147,6 +147,9 @@ Function Add-KCD {
 [string] $appName2 = "FormsSample"
 [string] $appPath2 = $BootStrapFolder + "Forms"
 
+[string] $appName3 = "HAPP"
+[string] $appPath3 = $BootStrapFolder + "HAPP"
+
 [string] $Randomizer = -join ((65..90) + (97..122) | Get-Random -Count 5 | % {[char]$_})
 
 [string] $AppPoolUserName = $Randomizer +"-AppPool"
@@ -199,6 +202,8 @@ Write-Progress -PercentComplete 11 -id 2 -Activity "Configuration Started" -Stat
 
 Create-WebAppAndPool -SiteName $WebSiteName -AppName $appName -AppFolder $appPath
 Create-WebAppAndPool -SiteName $WebSiteName -AppName $appName2 -AppFolder $appPath2
+Create-WebAppAndPool -SiteName $WebSiteName -AppName $appName3 -AppFolder $appPath3
+
 #Create-WebAppAndPool -SiteName $WebSiteName -AppName $appName3 -AppFolder $appPath3
 
 
@@ -212,6 +217,7 @@ Write-Progress -PercentComplete 21 -id 2 -Activity "Configuration Started" -Stat
 
 Set-AppPoolCredentials -AppName $appName -UserName $AppPoolUserName -Password $AppPoolPassword -Domain $AppPoolDomain
 Set-AppPoolCredentials -AppName $appName2 -UserName $AppPoolUserName -Password $AppPoolPassword -Domain $AppPoolDomain
+Set-AppPoolCredentials -AppName $appName3 -UserName $AppPoolUserName -Password $AppPoolPassword -Domain $AppPoolDomain
 #Set-AppPoolCredentials -AppName $appName3 -UserName $AppPoolUserName -Password $AppPoolPassword -Domain $AppPoolDomain
 
 Write-Progress -PercentComplete 70 -id 1 -Activity "App Proxy Demo Installer " -Status "Starting Configuration" 
