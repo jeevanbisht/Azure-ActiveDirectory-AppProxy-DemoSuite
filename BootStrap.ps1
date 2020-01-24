@@ -28,7 +28,8 @@ if ([int]$PSVersionTable.PSVersion.Major -lt 5)
 }
 
 
-[string] $AppProxyConnector =  Read-Host "AppProxy Connector Machine Netbios Name ( used for KCD Config )" 
+#[string] $AppProxyConnector =  Read-Host "AppProxy Connector Machine Netbios Name ( used for KCD Config )" 
+[string] $AppProxyConnector = "Ignore"
 
 ##Donot Modify
 function Invoke-Script
